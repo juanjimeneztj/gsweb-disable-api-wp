@@ -35,6 +35,14 @@ if(!class_exists('DISABLED_API_WP')){
         }
         return $result;
     }
-  
+  }
+}else{
+  add_action( 'admin_notices', 'disabled_api_wp_general_messages');
+  if(!function_exists('disabled_api_wp_general_messages')){
+    function disabled_api_wp_general_messages() {
+      echo '<div class="notice notice-error is-dismissible"><p>';
+      echo 'The plugin class could not be activated because another class with the same name already exists, please contact the plugin developer to solve your problem. <a href="https://juanjimeneztj.com" target="_blank">Contact</a>';
+      echo '</p></div>';
+    }
   }
 }
