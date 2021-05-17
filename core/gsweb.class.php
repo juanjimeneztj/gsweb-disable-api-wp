@@ -2,7 +2,7 @@
 
 define('JUANJBASEURL',plugin_dir_url(__DIR__));
 
-class gsweb {
+class DISABLED_API_WP {
 
 	private static $instance;
 	protected $templates;
@@ -10,7 +10,7 @@ class gsweb {
 	public static function get_instance() {
 
 		if ( null == self::$instance ) {
-			self::$instance = new gsweb();
+			self::$instance = new DISABLED_API_WP();
 		}
 
 		return self::$instance;
@@ -18,7 +18,7 @@ class gsweb {
 	}
 
 	private function __construct() {
-        add_filter( 'rest_authentication_errors', array('gsweb', 'init'), 0, 1);
+        add_filter( 'rest_authentication_errors', array('DISABLED_API_WP', 'init'), 0, 1);
 	}
 
   public function init(){

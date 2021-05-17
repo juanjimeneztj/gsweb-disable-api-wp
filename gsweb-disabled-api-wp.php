@@ -21,4 +21,4 @@ if(!defined('JUANJ_DISABLED_API_WP_PLUGIN_URL')) {
 
 require 'core/gsweb.class.php';
 
-add_action( 'plugins_loaded', array( 'gsweb', 'get_instance' ) );
+add_action( 'plugins_loaded', array( 'DISABLED_API_WP', 'get_instance' ) );
