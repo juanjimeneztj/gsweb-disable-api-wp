@@ -40,9 +40,7 @@ if(!class_exists('DISABLED_API_WP')){
   add_action( 'admin_notices', 'disabled_api_wp_general_messages');
   if(!function_exists('disabled_api_wp_general_messages')){
     function disabled_api_wp_general_messages() {
-      echo '<div class="notice notice-error is-dismissible"><p>';
-      echo 'The plugin class could not be activated because another class with the same name already exists, please contact the plugin developer to solve your problem. <a href="https://juanjimeneztj.com" target="_blank">Contact</a>';
-      echo '</p></div>';
+      echo '<div class="notice notice-error is-dismissible"><h3>Disable the plugin "Disable API WP"</h3><p>The plugin class could not be activated because another class with the same name already exists, One of the possible and most common problems is that it may be possible that you already have this plugin installed, please contact the plugin developer to solve your problem. <a href="https://juanjimeneztj.com" target="_blank">Contact</a></p><p>The plugin may appear activated but it will not perform any action and it may have a conflict with another of the plugins.</p></div>';
     }
   }
 }
