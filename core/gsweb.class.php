@@ -1,6 +1,8 @@
 <?php
 
-define('JUANJBASEURL',plugin_dir_url(__DIR__));
+if(!defined('JUANJBASEURL')) {
+	define('JUANJBASEURL', plugin_dir_url( __FILE__ ));
+}
 
 if(!class_exists('DISABLED_API_WP')){
 
